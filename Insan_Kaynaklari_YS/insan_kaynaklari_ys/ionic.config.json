@@ -1,7 +1,0 @@
-{
-  "name": "insan_kaynaklari_ys",
-  "integrations": {
-    "capacitor": {}
-  },
-  "type": "angular"
-}
