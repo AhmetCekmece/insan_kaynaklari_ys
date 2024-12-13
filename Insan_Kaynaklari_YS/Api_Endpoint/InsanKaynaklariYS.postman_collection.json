@@ -1,0 +1,145 @@
+{
+	"info": {
+		"_postman_id": "458031b3-96cb-4f05-b5d7-6ffebe9a458b",
+		"name": "InsanKaynaklariYS",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "40309250"
+	},
+	"item": [
+		{
+			"name": "Aday Bul",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/candidates/list/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"candidates",
+						"list",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Aday Listele",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/candidates/list",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"candidates",
+						"list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Aday Ekle",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstName\" : \"Ahmet\",\r\n    \"lastName\" : \"Çekmece\",\r\n    \"position\" : \"Software Developer\",\r\n    \"militaryStatus\" : \"TECILLI\",\r\n    \"noticePeriod\" : \"1999-01-15\",\r\n    \"phone\" : \"1111111111\",\r\n    \"email\" : \"ahmet@mail.com\",\r\n    \"cv\" : \"cv_dokuman\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/candidates/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"candidates",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Aday Guncelle",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstName\" : \"Ayşe\",\r\n    \"lastName\" : \"Fatma\",\r\n    \"position\" : \"Frontend Developer\",\r\n    \"militaryStatus\" : \"TECILLI\",\r\n    \"noticePeriod\" : \"1990-11-21\",\r\n    \"phone\" : \"1111111111\",\r\n    \"email\" : \"ayşe@mail.com\",\r\n    \"cv\" : \"cv_dokuman4\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/candidates/update/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"candidates",
+						"update",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Aday Sil",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstName\" : \"Ayşe\",\r\n    \"lastName\" : \"Fatma\",\r\n    \"position\" : \"Frontend Developer\",\r\n    \"militaryStatus\" : \"TECILLI\",\r\n    \"noticePeriod\" : \"1990-11-21\",\r\n    \"phone\" : \"1111111111\",\r\n    \"email\" : \"ayşe@mail.com\",\r\n    \"cv\" : \"cv_dokuman4\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/candidates/delete/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"candidates",
+						"delete",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
