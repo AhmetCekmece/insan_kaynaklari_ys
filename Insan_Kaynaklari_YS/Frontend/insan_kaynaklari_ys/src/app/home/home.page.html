@@ -1,0 +1,51 @@
+<ion-content>
+  <div class="table-container">
+    <table class="candidates-table">
+      <thead class="filter-thead">
+        <tr>
+          <th><ion-input [(ngModel)]="filter.id"  (ionInput)="filterCandidates()"></ion-input></th>
+          <th><ion-input [(ngModel)]="filter.firstName"  (ionInput)="filterCandidates()"></ion-input></th>
+          <th><ion-input [(ngModel)]="filter.lastName"  (ionInput)="filterCandidates()"></ion-input></th>
+          <th><ion-input [(ngModel)]="filter.position"  (ionInput)="filterCandidates()"></ion-input></th>
+          <th><ion-input [(ngModel)]="filter.militaryStatus"  (ionInput)="filterCandidates()"></ion-input></th>
+          <th><ion-input [(ngModel)]="filter.noticePeriod"  (ionInput)="filterCandidates()" type="date"></ion-input></th>
+          <th><ion-input [(ngModel)]="filter.phone"  (ionInput)="filterCandidates()"></ion-input></th>
+          <th><ion-input [(ngModel)]="filter.email" (ionInput)="filterCandidates()"></ion-input></th>
+          <th><ion-input [(ngModel)]="filter.cv"  (ionInput)="filterCandidates()"></ion-input></th>
+          <th></th>
+        </tr>
+      </thead>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Ad</th>
+          <th>Soyad</th>
+          <th>Pozisyon</th>
+          <th>Askerlik Durumu</th>
+          <th>İhbar Süresi</th>
+          <th>Telefon</th>
+          <th>Email</th>
+          <th>CV</th>
+          <th>İşlemler</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of filteredCandidates">
+          <td>{{ item.id }}</td>
+          <td>{{ item.firstName }}</td>
+          <td>{{ item.lastName }}</td>
+          <td>{{ item.position }}</td>
+          <td>{{ item.militaryStatus }}</td>
+          <td>{{ item.noticePeriod }}</td>
+          <td>{{ item.phone }}</td>
+          <td>{{ item.email }}</td>
+          <td>{{ item.cv }}</td>
+          <td>
+            <ion-button color="warning" [routerLink]="['/candidates/update', item.id]">Düzenle</ion-button>
+            <ion-button color="danger" (click)="deleteC(item.id)">Sil</ion-button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</ion-content>
